@@ -5,18 +5,29 @@
   Any issues or bugs can be reported in my discord (https://discord.com/invite/WDeb9fxuhq)
 
   How to set up:
+  
   1. Place the "RestartNotifier" folder inside your server's "Resources/Server" directory, so the main.lua is located at "Resources/Server/RestartNotifier/main.lua". (time.txt will be auto-generated on first set with default settings)
+ 
   2. Ensure the server has write/read permissions to the "RestartNotifier" folder for saving settings.
+ 
   3. Set so you are a authorized user by using the console command: r.au or restart.adduser <yourname> (without brackets & with your actual BeamMP username as it appears in-game CASE SENSITIVE).
+
   4. Configure your desired restart time and timezone using the console commands (see commands section below).
 
   Features:
+  
   • Daily scheduled restart with timezone support and optional Daylight Saving Time adjustment.
+  
   • Customizable warning messages and intervals leading up to the restart.
+  
   • Manual restart trigger with its own set of warnings and cancellation option.
+  
   • Console commands for server admins to configure settings and manage authorized users.
+  
   • Persistent configuration saved to a text file, allowing settings to survive server restarts.
+  
   • Console echo option to also print warnings and status updates in the server console for admins to see. (Can be toggled on/off in the CONFIG table)
+ 
   • User management system to allow specific players to access in-game commands without giving them full console access.
 
   Commands:
@@ -43,10 +54,15 @@
 
 
   Notes: 
+  
   • The plugin calculates the time until the next scheduled restart based on the server's current UTC time, the configured timezone offset, and DST setting. This ensures accurate scheduling regardless of where the server is hosted.
+ 
   • The plugin uses a single timer that ticks every second to check if it's time to send warnings or trigger the restart, which is more efficient than multiple timers for each warning.
-  • This script does NOT handle the actual restart process. It only sends chat messages as warnings and then calls exit() to shut down the server when the time comes. You will need to have an external process or script that automatically restarts the server when it shuts down for this to work effectively. 
+ 
+  • This script does NOT handle the actual restart process. It only sends chat messages as warnings and then calls exit() to shut down the server when the time comes. You will need to have an external process or script that automatically restarts the      server when it shuts down for this to work effectively. 
 
   Automatic Restart Setup:
+  
   For windows I recommend https://github.com/StanleyDudek/BeamMP-Server-Watchdog for that purpose, which can be set to automatically restart the server whenever it detects it has stopped. 
-  for linux, you can use a simple bash script with a loop that restarts the server whenever it exits, or use a process manager like systemd or pm2 to achieve the same effect.
+  
+  For linux, you can use a simple bash script with a loop that restarts the server whenever it exits, or use a process manager like systemd or pm2 to achieve the same effect.
