@@ -21,14 +21,23 @@
 
   Commands:
   • restart.status (r.s)             - Current status & countdown (In-Game & Console)
+  
   • restart.settime (r.st) HH:MM     - Set daily restart time (Console Only)
+ 
   • restart.settimezone (r.sz) <name>- Set timezone (EST, GMT, CET or UTC offset) (Console Only)
+ 
   • restart.zones (r.z)              - List available timezones (Console Only)
+ 
   • restart.dst (r.dst) <on/off>     - Toggle Daylight Saving (+1 hr) (Console Only)
+ 
   • restart.firein (r.f) <mins>      - Start manual countdown (In-Game & Console)
+
   • restart.cancel (r.c)             - Cancel manual countdown (In-Game & Console)
+
   • restart.adduser (r.au) <name>    - Add auth player (Console Only)
+
   • restart.removeuser (r.ru) <name> - Remove auth player (Console Only)
+ 
   • restart.users (r.us)             - List auth players (Console Only)
 
 
